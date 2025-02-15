@@ -23,7 +23,7 @@ function renderBooks(myBooks){
     
 function createCols ({img, title, category, price}) {
     const listCol = document.createElement('div')
-    listCol.className = 'col-6 col-md-4 col-lg-3'
+    listCol.className = 'col col-md-4 col-lg-3 g-3'
 
     const bookCard  = document.createElement('div')
     bookCard.className = 'card'
@@ -77,7 +77,7 @@ function createCols ({img, title, category, price}) {
 }
 
 function addToCart () {
-    
+
 }
 
 getBooks()

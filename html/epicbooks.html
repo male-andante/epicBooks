@@ -11,17 +11,18 @@
 </head>
 
 <body>
-    <header></header>
-    <main class="container">
-        <section id="search">
-            <form class="mb-3">
-                <div class="mb-3">
-                  <label for="inputSearch" class="form-label">Cerca il libro</label>
-                  <input type="text" class="form-control" id="inputSearch" aria-describedby="label">
-                </div>
-                <button type="submit" class="btn btn-primary">Cerca</button>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+              <a class="navbar-brand">EpicBooks</a>
+              <form id="search" class="d-flex" role="search">
+                <input id="inputSearch" class="form-control me-2" type="search" placeholder="Digita per titolo, o categoria" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Cerca</button>
               </form>
-        </section>
+            </div>
+          </nav>
+    </header>
+    <main class="container">
         <section id="listSection" class="row">
 
     </section>
