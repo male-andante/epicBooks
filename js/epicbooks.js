@@ -88,11 +88,16 @@ function addToCart(title, img, price) {
     renderCart()
 }
 
+function removeFromCart(index) {
+    cartItems.splice(index, 1)
+    renderCart()
+}
+
 function renderCart(){
     cartSection.innerHTML = ""
 
-        /*const cartCols = cartItems.map(book => createCols(book)) Usa createCols per ogni elemento nel carrello
-        cartSection.append(...cartCols) Aggiunge tutti gli elementi generati */
+        /*const cartCols = cartItems.map(book => createCols(book)) 
+        cartSection.append(...cartCols) Provare a farlo così, aggiungendo in cartCols la gestione del bottone di rimozione del carrello. */
     
 
     cartItems.forEach(({ img, title, category, price }, index) => {
@@ -120,11 +125,11 @@ function renderCart(){
 }
 
 function filterBook() {
-    const searchValue = inputSearch.value.trim()
+    const searchValue = inputSearch.value.trim().toLowerCase()
     if (searchValue.length >= 2) {
         const filteredBooks = allBooks.filter(
             (book) => {
-                if (book.title.toLowerCase().includes(searchValue.toLowerCase()) || book.category.toLowerCase().includes(searchValue.toLowerCase())) {
+                if (book.title.toLowerCase().includes(searchValue) || book.category.toLowerCase().includes(searchValue)) {
                     return true
                 }
                 return false
