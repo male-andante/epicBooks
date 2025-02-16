@@ -15,9 +15,9 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container">
               <a class="navbar-brand">EpicBooks</a>
-              <form id="search" class="d-flex" role="search" onkeyup="filterBook({title, category})">
+              <form id="search" class="d-flex" role="search" onsubmit="findBook(event)">
                 <input id="inputSearch" class="form-control me-2" type="search" placeholder="Digita per titolo, o categoria" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
+                <button id="submitButton" class="btn btn-outline-success" type="submit">Cerca</button>
               </form>
             </div>
           </nav>
