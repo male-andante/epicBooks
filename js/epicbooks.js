@@ -8,6 +8,9 @@ const submitButton = document.getElementById('submitButton')
 let allBooks = []
 let cartItems = [] // Array per il carrello
 
+// const cardOverlay = document.querySelector('.card-img-top').style.border = ""
+// '8px solid red'
+
 
 function getBooks() {
     return fetch(baseUrl)
@@ -83,8 +86,10 @@ function createCols({ img, title, category, price }) {
 }
 
 function addToCart(title, img, price) {
-    const addeBook = { title, img, price }
-    cartItems.push(addeBook)
+    const addedBook = { title, img, price }
+    cartItems.push(addedBook)
+    cardProperty.
+
     renderCart()
 }
 
